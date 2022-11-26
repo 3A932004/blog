@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('photos', PhotoController::class);
+Route::resource('photos', PhotoController::class)->only([
+    'index', 'show', 'store', 'update'
+]);
+
+//Route::resource('photos', PhotoController::class);
 
 //Route::get('/', function () {
 //    return view('welcome');
